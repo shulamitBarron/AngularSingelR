@@ -57,7 +57,7 @@ export class AppComponent  {
       },
     });
 
-    this._hubConnection = new HubConnection('http://localhost:5000/chat');
+    this._hubConnection = new HubConnection('https://angularaspnetcoresignalr.azurewebsites.net/chat');
     this._hubConnection
       .start()
       .then(() => console.log('Connection started!'))
