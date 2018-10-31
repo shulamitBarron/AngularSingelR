@@ -1,0 +1,68 @@
+<html>
+
+<body>
+  <div>
+    <ul>
+      <li>
+        <h2>
+          <a target="_blank" rel="noopener" href="https://www.lifewire.com/what-is-a-file-2625878">אודות קבצי מחשב</a>
+        </h2>
+      </li>
+      <li>
+        <h2>
+          <a target="_blank" rel="noopener" href="https://www.techlicious.com/tip/get-organized-and-clean-out-your-computer/">פתרונות לעומס מיותר במחשב</a>
+        </h2>
+      </li>
+      <li>
+        <h2>
+          <a target="_blank" rel="noopener" href="https://www.scootersoftware.com/download.php">תוכנות נוספות בתכום</a>
+        </h2>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h2>
+      <!-- <img class="img1" src="../images/help.png" > -->
+      <input id="input" type="button" (click)="con()">
+    </h2>
+  </div>
+  <button id="start" (click)="open()">הורד את התוכנה</button>
+  <button id="mifrat" (click)="mifrat()">מפרט התוכנה</button>
+</body>
+
+</html>
+<div id="div" *ngIf="isClick">
+  <div id="main-container" style="text-align:center">
+    <div class="container">
+      <h2>!שלום {{nick}} </h2>
+      <form (ngSubmit)="sendMessage()" #chatForm="ngForm">
+        <div>
+          <input type="text" id="message" name="message" [(ngModel)]="message" required>
+          <label for="message">:הודעה</label>
+        </div>
+        <p></p>
+        <p></p>
+        <button type="submit" id="sendmessage" [disabled]="!chatForm.valid">
+          שלח
+        </button>
+      </form>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="container" *ngIf="messages.length > 0">
+      <div *ngFor="let message of messages">
+        <span>{{message}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="div2">
+  <h2 id="h2">מפרט התוכנה</h2>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p>עליך להוריד את התוכנה שנמצאת בלינק של תוכנות נוספות בתכום ולאחר מכן ללחוץ על הכפתור הפעל את התוכנה בתוך התוכנה ישנו הסבר על כל חלונית ע"י לחיצה על מקש עזרה</p>
+  <h2 id="h2">!!!!!!!!!!בהנאה</h2>
+</div>
+
+<!-- *ngIf="ismif" -->
