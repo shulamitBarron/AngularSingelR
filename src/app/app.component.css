@@ -74,7 +74,7 @@ span{
     direction: rtl;
 }
 #start{
-    margin-top: 58vh;
+    margin-top: 50vh;
     position: center;
     /* position: absolute; */
     display: block;
@@ -90,28 +90,15 @@ span{
     font-size: 3vh;
     font-family: sans-serif;
     outline: none;
-    /* margin-right: -25vh; */
+    margin-left: 104vh;
 }
 #start:hover{
-    margin-top: 58vh;
-    position: center;
-    /* position: absolute; */
-    display: block;
-    margin: 379px auto;
-    text-align: center;
-    width: 21vh;
-    height: 10vh;
-    border-color: #fc8731;
-    background-color: #070f1c;
-    border-radius: 4vh;
-    /* color: #FF9800; */
+
     color: red;
-    font-size: 3vh;
-    font-family: sans-serif;
-    outline: none;
-    /* margin-right: -25vh; */
+
 }
-.swal2-popup.swal2-modal.swal2-show{
+.sweet-alert{
+    background-color: #E91E63 !important;
     display: none;
     position: relative;
     flex-direction: column;
@@ -128,8 +115,13 @@ span{
 .swal2-header{
     direction: rtl !important;
     background: red !important;
+    background-color: #E91E63 !important;
 }
  #mifrat {
+    position: absolute;
+    bottom: 205px;
+    margin-top: 535px;
+    top: -0;
     margin-top: 58vh;
     position: center;
     display: block;
@@ -144,41 +136,13 @@ span{
     font-size: 3vh;
     font-family: sans-serif;
     outline: none;
-    /* margin-left: 78vh; */
+    margin-top: 81vh;
+    margin-left: 79vh;
 }
 #mifrat:hover{
-    margin-top: 58vh;
-    position: center;
-    /* position: absolute; */
-    display: block;
-    margin: 379px auto;
-    text-align: center;
-    width: 21vh;
-    height: 10vh;
-    border-color: #fc8731;
-    background-color: #070f1c;
-    border-radius: 4vh;
-    /* color: #FF9800; */
+  
     color: red;
-    font-size: 3vh;
-    font-family: sans-serif;
-    outline: none;
-    margin-left: 78vh;
-}
-#div2
-{
-    border-radius: 7vh;
-    background-color: #06101c;
-    border-color: #fc8731;
-    border-style: double;
-    float: right;
-    margin-top: -57vh;
-    margin-right: 4vh;
-    height: 31vh;
-    width: 21vw;
-    margin-left: 36vh;
-    margin-right: 141vh;
-}
+ }
 #h2{
     text-align: center;
 }
@@ -187,5 +151,33 @@ p{
     font-size: 2vh;
     font-family: monospace;
     text-align: center;
+}
+
+.swal2-container.in{
+background-color: #E91E63 !important;
+}
+
+.h{
+    background-color: #E91E63 !important;
+}
+#div2{
+    border-radius: 7vh;
+    background-color: #06101c;
+    border-color: #fc8731;
+    border-style: double;
+    float: right;
+    margin-top: -60vh;
+    margin-right: 4vh;
+    height: 60vh;
+    width: 27vw;
+    border-radius: 7vh;
+    background-color: #06101c;
+    border-color: #fc8731;
+    border-style: double;
+    float: right;
+    margin-top: -60vh;
+    margin-right: 142vh;
+    height: 32vh;
+    width: 21vw;
 }
 
