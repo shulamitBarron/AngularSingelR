@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { HubConnection } from '@aspnet/signalr-client';
 import { Http } from '@angular/http';
-import swal from 'sweetalert2'
+import swal from 'sweetalert2';
+import { HttpClient } from '@angular/common/http';
+import { saveAs } from 'file-saver';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,25 +17,27 @@ export class AppComponent {
   nick = 'אלמוני';
   message = '';
   messages: string[] = [];
-  constructor(private http: Http) { }
+  constructor(private http: Http, private httpClient: HttpClient) { }
   public sendMessage(): void {
     this._hubConnection
       .invoke('sendToAll', this.nick, this.message)
       .catch(err => console.error(err));
   }
   public runProgram(): void {
-    this.http.get('https://angularaspnetcoresignalr.azurewebsites.net/api/runProgram').subscribe((response) => { });
+    this.httpClient.get('https://angularaspnetcoresignalr.azurewebsites.net/api/runProgram', { responseType: 'blob' }).subscribe(
+      blob => saveAs(blob, 'DeleteDoubleFiles.exe')
+    );
   }
   mifrat() {
-    if (this.ismif == true) {
+    if (this.ismif === true) {
       this.ismif = false;
       return;
-    }
-    else
+    } else {
       this.ismif = true;
+    }
   }
   con() {
-    if (this.isClick == true) {
+    if (this.isClick === true) {
       this.isClick = false;
 
       return;
@@ -50,10 +55,11 @@ export class AppComponent {
       confirmButtonText: 'שלח',
       showLoaderOnConfirm: true,
       preConfirm: (login) => {
-        if (login)
+        if (login) {
           this.nick = login;
-        else
+        } else {
           this.nick = 'אלמוני';
+        }
         this.isClick = true;
       },
     })
@@ -72,4 +78,3 @@ export class AppComponent {
 
   }
 }
-// http://localhost:5000/
