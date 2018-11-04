@@ -25,7 +25,7 @@ export class AppComponent {
   }
   public runProgram(): void {
     this.httpClient.get('https://angularaspnetcoresignalr.azurewebsites.net/api/runProgram', { responseType: 'blob' }).subscribe(
-      blob => saveAs(blob, 'DeleteDoubleFiles.exe')
+      blob => saveAs(blob, 'publish.rar')
     );
   }
   mifrat() {
