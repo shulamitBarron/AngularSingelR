@@ -4,14 +4,17 @@ import { Http } from '@angular/http';
 import swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
 import { saveAs } from 'file-saver';
+import { getLocaleNumberFormat } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit  {
+
   private _hubConnection: HubConnection;
+  num:number;
   isClick = false;
   ismif = false;
   nick = 'אלמוני';
@@ -23,10 +26,17 @@ export class AppComponent {
       .invoke('sendToAll', this.nick, this.message)
       .catch(err => console.error(err));
   }
+  // https://angularaspnetcoresignalr.azurewebsites.net
   public runProgram(): void {
     this.httpClient.get('https://angularaspnetcoresignalr.azurewebsites.net/api/runProgram', { responseType: 'blob' }).subscribe(
       blob => saveAs(blob, 'publish.rar')
     );
+    this.getNum();
+  }
+  getNum(){
+    this.httpClient.get('https://angularaspnetcoresignalr.azurewebsites.net/api/runProgram/1').subscribe((data:number) => {
+      this.num =  data;
+    })
   }
   mifrat() {
     if (this.ismif === true) {
@@ -76,5 +86,10 @@ export class AppComponent {
       this.messages.push(text);
     });
 
+  }
+  ngOnInit(): void {
+    this.httpClient.get('https://angularaspnetcoresignalr.azurewebsites.net/api/runProgram/3').subscribe((data:number) => {
+      this.num =  data;
+    })
   }
 }
