@@ -74,23 +74,23 @@ span{
     direction: rtl;
 }
 #start{
-    margin-top: 50vh;
-    position: center;
-    /* position: absolute; */
-    display: block;
-    margin: 379px auto;
-    text-align: center;
-    width: 21vh;
-    height: 10vh;
     border-color: #fc8731;
     background-color: #070f1c;
     border-radius: 4vh;
-    /* color: #FF9800; */
-    color: #fc8731;
-    font-size: 3vh;
-    font-family: sans-serif;
-    outline: none;
-    margin-left: 104vh;
+         color: #fc8731;
+         display: block;
+    	     text-align: center;
+  	     width: 21vh;
+ 	     height: 10vh;
+        border-radius: 4vh;
+   	     font-size: 3vh;
+  	     font-family: sans-serif;
+  	     outline: none;
+   	     position: absolute;
+    	top: 79vh;
+  	    left: 45;
+    left: 51vw;
+    
 }
 #start:hover{
 
@@ -119,25 +119,25 @@ span{
 }
  #mifrat {
     position: absolute;
-    bottom: 205px;
-    margin-top: 535px;
-    top: -0;
-    margin-top: 58vh;
-    position: center;
-    display: block;
-    /* margin: 379px auto; */
-    text-align: center;
-    width: 21vh;
-    height: 10vh;
-    border-color: #fc8731;
-    background-color: #070f1c;
-    border-radius: 4vh;
-    color: #fc8731;
-    font-size: 3vh;
-    font-family: sans-serif;
-    outline: none;
-    margin-top: 80vh;
-    margin-left: 79vh;
+   	     bottom: 205px;
+    	  
+    	     top: 79vh;
+  	     left: 39vw;
+  	    
+   	    position: center;
+  	   
+   	     text-align: center;
+         width: 21vh;
+    	     height: 10vh;
+   	     border-color: #fc8731;
+        background-color: #070f1c;
+        border-radius: 4vh;
+    	     color: #fc8731;
+         font-size: 3vh;
+        font-family: sans-serif;
+         outline: none;
+  
+    
 }
 #mifrat:hover{
   
