@@ -26,9 +26,12 @@ a:hover{
     background: url(../images/helping.png) no-repeat center;
     border-radius: 74vh;
     height: 20vh;
-    float: right;
+    /* float: right;
     margin-top: -19vh;
-    margin-right: 3vh;
+    margin-right: 3vh; */
+    position:absolute;
+    top:4%;
+    left:88%;
     width: 21vh;
 }
 input:hover{
@@ -183,8 +186,8 @@ background-color: #E91E63 !important;
 #ee
 {   font-size: 4vh;
     color: white;
-    left: 170vh;
-    top: 92vh;
+    left: 81%;
+    top: 92%;
     font-family: serif;
     position: absolute;
     text-shadow: red;
